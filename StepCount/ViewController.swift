@@ -74,8 +74,19 @@ class ViewController: UIViewController {
     }
   }
   
+  func animateToAngle() -> Int {
+    if stepsTaken / stepGoal >= 1 {
+      stepsTakenLabel.text = "GOAL!"
+      return 360
+    } else {
+      stepsTakenLabel.text = "\(Int(stepsTaken)) steps"
+      return Int(360 * (stepsTaken / stepGoal))
+    }
+    
+  }
+  
   func animateButton() {
-    progress.animateFromAngle(0, toAngle: Int(360 * (stepsTaken / stepGoal )), duration: 5) { completed in
+    progress.animateFromAngle(0, toAngle: animateToAngle(), duration: 5) { completed in
       if completed {
         print("animation stopped, completed")
       } else {
@@ -83,9 +94,10 @@ class ViewController: UIViewController {
       }
     }
   }
+  
   @IBAction func goalDidEndEditing() {
     
-    if stepGoalTextField.text != nil && Int(stepGoalTextField.text!)! > 0 {
+    if stepGoalTextField.text != nil && Int(stepGoalTextField.text!)! > 0 && stepGoalTextField.text != "GOAL!" {
       stepGoal = Double(stepGoalTextField.text!)!
       self.animateButton()
 
