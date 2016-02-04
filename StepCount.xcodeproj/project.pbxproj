@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4E4658EF1C62C61800BEF4AC /* KDCircularProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E4658EE1C62C61800BEF4AC /* KDCircularProgress.swift */; };
 		4E839FBF1C5C6512005527D3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E839FBE1C5C6512005527D3 /* AppDelegate.swift */; };
 		4E839FC11C5C6512005527D3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E839FC01C5C6512005527D3 /* ViewController.swift */; };
 		4E839FC41C5C6512005527D3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E839FC21C5C6512005527D3 /* Main.storyboard */; };
@@ -28,6 +29,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4E4658EE1C62C61800BEF4AC /* KDCircularProgress.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KDCircularProgress.swift; sourceTree = "<group>"; };
 		4E839FBB1C5C6512005527D3 /* StepCount.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StepCount.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E839FBE1C5C6512005527D3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4E839FC01C5C6512005527D3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -88,6 +90,7 @@
 				4E839FBE1C5C6512005527D3 /* AppDelegate.swift */,
 				4E839FC01C5C6512005527D3 /* ViewController.swift */,
 				4E839FE11C5C6A69005527D3 /* HealthManager.swift */,
+				4E4658EE1C62C61800BEF4AC /* KDCircularProgress.swift */,
 				4E839FC21C5C6512005527D3 /* Main.storyboard */,
 				4E839FC51C5C6512005527D3 /* Assets.xcassets */,
 				4E839FC71C5C6512005527D3 /* LaunchScreen.storyboard */,
@@ -213,6 +216,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4E4658EF1C62C61800BEF4AC /* KDCircularProgress.swift in Sources */,
 				4E839FC11C5C6512005527D3 /* ViewController.swift in Sources */,
 				4E839FE21C5C6A69005527D3 /* HealthManager.swift in Sources */,
 				4E839FBF1C5C6512005527D3 /* AppDelegate.swift in Sources */,
@@ -411,6 +415,7 @@
 				4E839FDA1C5C6512005527D3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4E839FDB1C5C6512005527D3 /* Build configuration list for PBXNativeTarget "StepCountTests" */ = {
 			isa = XCConfigurationList;
@@ -419,6 +424,7 @@
 				4E839FDD1C5C6512005527D3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

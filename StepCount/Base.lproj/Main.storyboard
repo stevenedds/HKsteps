@@ -18,31 +18,49 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="stepsLabel" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="klX-tv-h9j">
-                                <rect key="frame" x="20" y="20" width="560" height="43"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="set your step goal" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ihB-1X-1VB">
+                                <rect key="frame" x="20" y="67" width="560" height="24"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad" keyboardAppearance="alert"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="_placeholderLabel.textColor">
+                                        <color key="value" red="0.79111426767676774" green="0.79111426767676774" blue="0.79111426767676774" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="goalDidEndEditing" destination="BYZ-38-t0r" eventType="editingDidEnd" id="ebN-h0-1hd"/>
+                                </connections>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Goal:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zwF-FC-Uq0">
+                                <rect key="frame" x="281" y="28" width="40" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z3h-yF-8E9">
-                                <rect key="frame" x="272" y="89" width="57" height="30"/>
-                                <state key="normal" title="get data"/>
-                                <connections>
-                                    <action selector="getDataButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="eHx-vs-cbF"/>
-                                </connections>
-                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="stepsTaken" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="97V-Hx-72U">
+                                <rect key="frame" x="20" y="288" width="560" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="leadingMargin" secondItem="klX-tv-h9j" secondAttribute="leading" id="EQk-KX-BD8"/>
-                            <constraint firstItem="z3h-yF-8E9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="JDA-HB-lpP"/>
-                            <constraint firstItem="z3h-yF-8E9" firstAttribute="top" secondItem="klX-tv-h9j" secondAttribute="bottom" constant="26" id="NPX-Zf-Elf"/>
-                            <constraint firstItem="klX-tv-h9j" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="Rjr-1A-1sk"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="klX-tv-h9j" secondAttribute="trailing" id="c4y-06-asm"/>
+                            <constraint firstItem="97V-Hx-72U" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="4bW-0b-agd"/>
+                            <constraint firstItem="zwF-FC-Uq0" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="261" id="QKz-Iy-RKt"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="zwF-FC-Uq0" secondAttribute="trailing" constant="259" id="XGn-SL-GVp"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="ihB-1X-1VB" secondAttribute="leading" id="aix-Fr-ZLS"/>
+                            <constraint firstItem="zwF-FC-Uq0" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="b2d-NV-5QH"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ihB-1X-1VB" secondAttribute="trailing" id="ecq-Gg-m63"/>
+                            <constraint firstItem="ihB-1X-1VB" firstAttribute="top" secondItem="zwF-FC-Uq0" secondAttribute="bottom" constant="19" id="g80-ik-3Rn"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="97V-Hx-72U" secondAttribute="trailing" id="t6R-zx-wM4"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="97V-Hx-72U" secondAttribute="leading" id="xpr-gv-gyv"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="stepsLabel" destination="klX-tv-h9j" id="kc6-Wu-hgZ"/>
+                        <outlet property="stepGoalTextField" destination="ihB-1X-1VB" id="omq-5K-unC"/>
+                        <outlet property="stepsTakenLabel" destination="97V-Hx-72U" id="sdS-Al-xbe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
