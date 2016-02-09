@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4E3DE01A1C69976500241FD3 /* walking_filled-32.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E3DE0191C69976500241FD3 /* walking_filled-32.png */; };
+		4E3DE01C1C6997B700241FD3 /* conference_filled-32.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E3DE01B1C6997B700241FD3 /* conference_filled-32.png */; };
+		4E3DE01E1C69994400241FD3 /* angry_fist_filled-32.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E3DE01D1C69994400241FD3 /* angry_fist_filled-32.png */; };
+		4E3DE0201C699A9E00241FD3 /* FriendsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E3DE01F1C699A9E00241FD3 /* FriendsTableViewController.swift */; };
+		4E3DE0251C69A2DC00241FD3 /* FriendTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E3DE0231C69A2DC00241FD3 /* FriendTableViewCell.swift */; };
+		4E3DE0261C69A2DC00241FD3 /* FriendTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E3DE0241C69A2DC00241FD3 /* FriendTableViewCell.xib */; };
+		4E3DE02C1C69AE9000241FD3 /* steve.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4E3DE02B1C69AE9000241FD3 /* steve.jpg */; };
+		4E3DE02E1C69AEBB00241FD3 /* ryan.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E3DE02D1C69AEBB00241FD3 /* ryan.png */; };
 		4E4658EF1C62C61800BEF4AC /* KDCircularProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E4658EE1C62C61800BEF4AC /* KDCircularProgress.swift */; };
 		4E839FBF1C5C6512005527D3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E839FBE1C5C6512005527D3 /* AppDelegate.swift */; };
 		4E839FC11C5C6512005527D3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E839FC01C5C6512005527D3 /* ViewController.swift */; };
@@ -16,6 +24,7 @@
 		4E839FD41C5C6512005527D3 /* StepCountTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E839FD31C5C6512005527D3 /* StepCountTests.swift */; };
 		4E839FE01C5C651B005527D3 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E839FDF1C5C651B005527D3 /* HealthKit.framework */; };
 		4E839FE21C5C6A69005527D3 /* HealthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E839FE11C5C6A69005527D3 /* HealthManager.swift */; };
+		4EF1C1BF1C69AEE000A0C3AF /* max.png in Resources */ = {isa = PBXBuildFile; fileRef = 4EF1C1BE1C69AEE000A0C3AF /* max.png */; };
 		86270AE27F2C0428E7F9C76D /* Pods_StepCount.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD51753AB0BF0E952E09282B /* Pods_StepCount.framework */; };
 		EDD6DE66866D9858D65C956D /* Pods_StepCountTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF8549288681E4974C9D0930 /* Pods_StepCountTests.framework */; };
 		F7EBDD1E1C675F5F00065896 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7EBDD1D1C675F5F00065896 /* LoginViewController.swift */; };
@@ -34,6 +43,14 @@
 
 /* Begin PBXFileReference section */
 		4D34503CA1AB93ED38F5345A /* Pods-StepCount.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StepCount.release.xcconfig"; path = "Pods/Target Support Files/Pods-StepCount/Pods-StepCount.release.xcconfig"; sourceTree = "<group>"; };
+		4E3DE0191C69976500241FD3 /* walking_filled-32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "walking_filled-32.png"; sourceTree = "<group>"; };
+		4E3DE01B1C6997B700241FD3 /* conference_filled-32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "conference_filled-32.png"; sourceTree = "<group>"; };
+		4E3DE01D1C69994400241FD3 /* angry_fist_filled-32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "angry_fist_filled-32.png"; sourceTree = "<group>"; };
+		4E3DE01F1C699A9E00241FD3 /* FriendsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendsTableViewController.swift; sourceTree = "<group>"; };
+		4E3DE0231C69A2DC00241FD3 /* FriendTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendTableViewCell.swift; sourceTree = "<group>"; };
+		4E3DE0241C69A2DC00241FD3 /* FriendTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FriendTableViewCell.xib; sourceTree = "<group>"; };
+		4E3DE02B1C69AE9000241FD3 /* steve.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = steve.jpg; sourceTree = "<group>"; };
+		4E3DE02D1C69AEBB00241FD3 /* ryan.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ryan.png; sourceTree = "<group>"; };
 		4E4658EE1C62C61800BEF4AC /* KDCircularProgress.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KDCircularProgress.swift; sourceTree = "<group>"; };
 		4E839FBB1C5C6512005527D3 /* StepCount.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StepCount.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E839FBE1C5C6512005527D3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -48,6 +65,7 @@
 		4E839FDE1C5C651B005527D3 /* StepCount.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = StepCount.entitlements; sourceTree = "<group>"; };
 		4E839FDF1C5C651B005527D3 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 		4E839FE11C5C6A69005527D3 /* HealthManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HealthManager.swift; sourceTree = "<group>"; };
+		4EF1C1BE1C69AEE000A0C3AF /* max.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = max.png; sourceTree = "<group>"; };
 		649883176514E6B13BDD314F /* Pods-StepCountTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StepCountTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-StepCountTests/Pods-StepCountTests.release.xcconfig"; sourceTree = "<group>"; };
 		78A7DF12DC96E77BEAFB6D8C /* Pods-StepCountTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StepCountTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-StepCountTests/Pods-StepCountTests.debug.xcconfig"; sourceTree = "<group>"; };
 		CF8549288681E4974C9D0930 /* Pods_StepCountTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StepCountTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -78,10 +96,80 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4E3DE0121C69938F00241FD3 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				F7EBDD1D1C675F5F00065896 /* LoginViewController.swift */,
+				F7EBDD1F1C67625E00065896 /* SearchTableViewController.swift */,
+				4E839FC01C5C6512005527D3 /* ViewController.swift */,
+				4E3DE01F1C699A9E00241FD3 /* FriendsTableViewController.swift */,
+				4E3DE0271C69A2E000241FD3 /* Friend Cell */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		4E3DE0131C6993A800241FD3 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				4E839FE11C5C6A69005527D3 /* HealthManager.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		4E3DE0141C6993C800241FD3 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				4E4658EE1C62C61800BEF4AC /* KDCircularProgress.swift */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		4E3DE0151C69941B00241FD3 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				4E3DE0281C69ADE100241FD3 /* images */,
+				4E3DE0181C6996D200241FD3 /* icons */,
+				4E839FDE1C5C651B005527D3 /* StepCount.entitlements */,
+				4E839FDF1C5C651B005527D3 /* HealthKit.framework */,
+				4E839FC51C5C6512005527D3 /* Assets.xcassets */,
+				4E839FC71C5C6512005527D3 /* LaunchScreen.storyboard */,
+				4E839FCA1C5C6512005527D3 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		4E3DE0181C6996D200241FD3 /* icons */ = {
+			isa = PBXGroup;
+			children = (
+				4E3DE01D1C69994400241FD3 /* angry_fist_filled-32.png */,
+				4E3DE0191C69976500241FD3 /* walking_filled-32.png */,
+				4E3DE01B1C6997B700241FD3 /* conference_filled-32.png */,
+			);
+			name = icons;
+			sourceTree = "<group>";
+		};
+		4E3DE0271C69A2E000241FD3 /* Friend Cell */ = {
+			isa = PBXGroup;
+			children = (
+				4E3DE0231C69A2DC00241FD3 /* FriendTableViewCell.swift */,
+				4E3DE0241C69A2DC00241FD3 /* FriendTableViewCell.xib */,
+			);
+			name = "Friend Cell";
+			sourceTree = "<group>";
+		};
+		4E3DE0281C69ADE100241FD3 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				4E3DE02B1C69AE9000241FD3 /* steve.jpg */,
+				4E3DE02D1C69AEBB00241FD3 /* ryan.png */,
+				4EF1C1BE1C69AEE000A0C3AF /* max.png */,
+			);
+			name = images;
+			sourceTree = "<group>";
+		};
 		4E839FB21C5C6512005527D3 = {
 			isa = PBXGroup;
 			children = (
-				4E839FDF1C5C651B005527D3 /* HealthKit.framework */,
 				4E839FBD1C5C6512005527D3 /* StepCount */,
 				4E839FD21C5C6512005527D3 /* StepCountTests */,
 				4E839FBC1C5C6512005527D3 /* Products */,
@@ -102,17 +190,12 @@
 		4E839FBD1C5C6512005527D3 /* StepCount */ = {
 			isa = PBXGroup;
 			children = (
-				4E839FDE1C5C651B005527D3 /* StepCount.entitlements */,
 				4E839FBE1C5C6512005527D3 /* AppDelegate.swift */,
-				4E839FC01C5C6512005527D3 /* ViewController.swift */,
-				4E839FE11C5C6A69005527D3 /* HealthManager.swift */,
-				4E4658EE1C62C61800BEF4AC /* KDCircularProgress.swift */,
 				4E839FC21C5C6512005527D3 /* Main.storyboard */,
-				F7EBDD1F1C67625E00065896 /* SearchTableViewController.swift */,
-				F7EBDD1D1C675F5F00065896 /* LoginViewController.swift */,
-				4E839FC51C5C6512005527D3 /* Assets.xcassets */,
-				4E839FC71C5C6512005527D3 /* LaunchScreen.storyboard */,
-				4E839FCA1C5C6512005527D3 /* Info.plist */,
+				4E3DE0121C69938F00241FD3 /* View Controllers */,
+				4E3DE0131C6993A800241FD3 /* Models */,
+				4E3DE0141C6993C800241FD3 /* Classes */,
+				4E3DE0151C69941B00241FD3 /* Supporting Files */,
 			);
 			path = StepCount;
 			sourceTree = "<group>";
@@ -240,9 +323,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4E3DE02E1C69AEBB00241FD3 /* ryan.png in Resources */,
+				4EF1C1BF1C69AEE000A0C3AF /* max.png in Resources */,
 				4E839FC91C5C6512005527D3 /* LaunchScreen.storyboard in Resources */,
+				4E3DE02C1C69AE9000241FD3 /* steve.jpg in Resources */,
+				4E3DE01A1C69976500241FD3 /* walking_filled-32.png in Resources */,
 				4E839FC61C5C6512005527D3 /* Assets.xcassets in Resources */,
+				4E3DE0261C69A2DC00241FD3 /* FriendTableViewCell.xib in Resources */,
 				4E839FC41C5C6512005527D3 /* Main.storyboard in Resources */,
+				4E3DE01E1C69994400241FD3 /* angry_fist_filled-32.png in Resources */,
+				4E3DE01C1C6997B700241FD3 /* conference_filled-32.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -358,7 +448,9 @@
 				4E839FC11C5C6512005527D3 /* ViewController.swift in Sources */,
 				4E839FE21C5C6A69005527D3 /* HealthManager.swift in Sources */,
 				F7EBDD1E1C675F5F00065896 /* LoginViewController.swift in Sources */,
+				4E3DE0201C699A9E00241FD3 /* FriendsTableViewController.swift in Sources */,
 				4E839FBF1C5C6512005527D3 /* AppDelegate.swift in Sources */,
+				4E3DE0251C69A2DC00241FD3 /* FriendTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
