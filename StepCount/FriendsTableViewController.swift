@@ -16,10 +16,11 @@ class FriendsTableViewController: UITableViewController {
 
   let friendCellID = "FriendCell"
   
-  let names = ["steve", "ryan", "max"]
-  let steps = ["8,295", "7,565", "4,200"]
-  let avatars = ["steve.jpg", "ryan.png", "max.png"]
-  
+  let friends = [
+    Friend(name: "steve", steps: "8,240", avatarName: "steve.jpg"),
+    Friend(name: "ryan", steps: "7,509", avatarName: "ryan.png"),
+    Friend(name: "max", steps: "4,374", avatarName: "max.png")]
+
     override func viewDidLoad() {
         super.viewDidLoad()
       view.backgroundColor = backgroundColor
@@ -32,7 +33,7 @@ class FriendsTableViewController: UITableViewController {
     }
 
   override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return 3
+    return friends.count
   }
   
   override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
@@ -43,9 +44,9 @@ class FriendsTableViewController: UITableViewController {
     
     let cell = tableView.dequeueReusableCellWithIdentifier(friendCellID) as! FriendTableViewCell
     
-    cell.avatarImageView?.image = UIImage(named: avatars[indexPath.row])
-    cell.nameLabel.text = names[indexPath.row]
-    cell.stepsLabel.text = steps[indexPath.row]
+    cell.avatarImageView?.image = UIImage(named: friends[indexPath.row].avatarName)
+    cell.nameLabel.text = friends[indexPath.row].name
+    cell.stepsLabel.text = friends[indexPath.row].steps
     
     return cell
   }

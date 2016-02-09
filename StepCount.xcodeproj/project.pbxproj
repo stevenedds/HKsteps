@@ -25,6 +25,7 @@
 		4E839FE01C5C651B005527D3 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E839FDF1C5C651B005527D3 /* HealthKit.framework */; };
 		4E839FE21C5C6A69005527D3 /* HealthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E839FE11C5C6A69005527D3 /* HealthManager.swift */; };
 		4EF1C1BF1C69AEE000A0C3AF /* max.png in Resources */ = {isa = PBXBuildFile; fileRef = 4EF1C1BE1C69AEE000A0C3AF /* max.png */; };
+		4EF1C1C51C69B61B00A0C3AF /* FriendModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF1C1C41C69B61B00A0C3AF /* FriendModel.swift */; };
 		86270AE27F2C0428E7F9C76D /* Pods_StepCount.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD51753AB0BF0E952E09282B /* Pods_StepCount.framework */; };
 		EDD6DE66866D9858D65C956D /* Pods_StepCountTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF8549288681E4974C9D0930 /* Pods_StepCountTests.framework */; };
 		F7EBDD1E1C675F5F00065896 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7EBDD1D1C675F5F00065896 /* LoginViewController.swift */; };
@@ -66,6 +67,7 @@
 		4E839FDF1C5C651B005527D3 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 		4E839FE11C5C6A69005527D3 /* HealthManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HealthManager.swift; sourceTree = "<group>"; };
 		4EF1C1BE1C69AEE000A0C3AF /* max.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = max.png; sourceTree = "<group>"; };
+		4EF1C1C41C69B61B00A0C3AF /* FriendModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendModel.swift; sourceTree = "<group>"; };
 		649883176514E6B13BDD314F /* Pods-StepCountTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StepCountTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-StepCountTests/Pods-StepCountTests.release.xcconfig"; sourceTree = "<group>"; };
 		78A7DF12DC96E77BEAFB6D8C /* Pods-StepCountTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StepCountTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-StepCountTests/Pods-StepCountTests.debug.xcconfig"; sourceTree = "<group>"; };
 		CF8549288681E4974C9D0930 /* Pods_StepCountTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StepCountTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -112,6 +114,7 @@
 			isa = PBXGroup;
 			children = (
 				4E839FE11C5C6A69005527D3 /* HealthManager.swift */,
+				4EF1C1C41C69B61B00A0C3AF /* FriendModel.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -447,6 +450,7 @@
 				F7EBDD201C67625E00065896 /* SearchTableViewController.swift in Sources */,
 				4E839FC11C5C6512005527D3 /* ViewController.swift in Sources */,
 				4E839FE21C5C6A69005527D3 /* HealthManager.swift in Sources */,
+				4EF1C1C51C69B61B00A0C3AF /* FriendModel.swift in Sources */,
 				F7EBDD1E1C675F5F00065896 /* LoginViewController.swift in Sources */,
 				4E3DE0201C699A9E00241FD3 /* FriendsTableViewController.swift in Sources */,
 				4E839FBF1C5C6512005527D3 /* AppDelegate.swift in Sources */,
