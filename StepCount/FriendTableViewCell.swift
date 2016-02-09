@@ -14,12 +14,15 @@ class FriendTableViewCell: UITableViewCell {
   @IBOutlet weak var stepsLabel: UILabel!
   @IBOutlet weak var avatarImageView: UIImageView!
   
+  let green = UIColor(red: 62/255, green: 213/255, blue: 171/255, alpha: 1)
   
     override func awakeFromNib() {
         super.awakeFromNib()
       
       avatarImageView?.layer.cornerRadius = (avatarImageView?.frame.size.width)! / 2
       avatarImageView?.clipsToBounds = true
+      
+      stepsLabel.textColor = green
       
   }
 
