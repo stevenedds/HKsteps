@@ -1,29 +1,58 @@
 >-
   PODS:
   - >-
+    Backendless-ios-SDK (3.0.7)
+  - >-
+    Charts/Core (2.2.1)
+  - >-
+    Charts/Realm (2.2.1):
+    - >-
+      Charts/Core
+    - >-
+      RealmSwift (~> 0.97)
+  - >-
     DZNEmptyDataSet (1.7.3)
   - >-
-    Firebase (2.5.0)
+    Realm (0.98.1):
+    - >-
+      Realm/Headers (= 0.98.1)
+  - >-
+    Realm/Headers (0.98.1)
+  - >-
+    RealmSwift (0.98.1):
+    - >-
+      Realm (= 0.98.1)
 
 >-
   DEPENDENCIES:
   - >-
-    DZNEmptyDataSet
+    Backendless-ios-SDK
   - >-
-    Firebase
+    Charts/Realm
+  - >-
+    DZNEmptyDataSet
 
 >-
   SPEC CHECKSUMS:
   >-
+    Backendless-ios-SDK: >-
+    acce000775d4f2c8caa4a40bca140fb192216772
+  >-
+    Charts: >-
+    3ff893c1a4416ab6abed7a6d26fa1c13372f3456
+  >-
     DZNEmptyDataSet: >-
     dd7cca17c1d07dfa78956859b1e70a52505678ef
   >-
-    Firebase: >-
-    744617c0733b45198f9486ebd5cac64ec2d10d79
+    Realm: >-
+    ca4a4122e939e228e10694fc49011386cb2ecb07
+  >-
+    RealmSwift: >-
+    7d3c7033427816a2c3417ba0d004d694987e503a
 
 >-
   PODFILE CHECKSUM: >-
-  818e1731cf8e57aef801a80319008c2975702a7f
+  e6ed100e22335c8b7f16ef142ce99dd952b2dc91
 
 >-
   COCOAPODS: >-

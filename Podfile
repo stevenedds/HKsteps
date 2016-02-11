@@ -4,8 +4,9 @@
  use_frameworks!
 
 target 'StepCount' do
-pod 'Firebase'
+pod 'Backendless-ios-SDK'
 pod 'DZNEmptyDataSet'
+pod 'Charts/Realm'
 end
 
 target 'StepCountTests' do
