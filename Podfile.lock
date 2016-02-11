@@ -3,32 +3,20 @@
   - >-
     Backendless-ios-SDK (3.0.7)
   - >-
-    Charts/Core (2.2.1)
+    Charts (2.2.2):
+    - >-
+      Charts/Core (= 2.2.2)
   - >-
-    Charts/Realm (2.2.1):
-    - >-
-      Charts/Core
-    - >-
-      RealmSwift (~> 0.97)
+    Charts/Core (2.2.2)
   - >-
     DZNEmptyDataSet (1.7.3)
-  - >-
-    Realm (0.98.1):
-    - >-
-      Realm/Headers (= 0.98.1)
-  - >-
-    Realm/Headers (0.98.1)
-  - >-
-    RealmSwift (0.98.1):
-    - >-
-      Realm (= 0.98.1)
 
 >-
   DEPENDENCIES:
   - >-
     Backendless-ios-SDK
   - >-
-    Charts/Realm
+    Charts
   - >-
     DZNEmptyDataSet
 
@@ -39,20 +27,14 @@
     acce000775d4f2c8caa4a40bca140fb192216772
   >-
     Charts: >-
-    3ff893c1a4416ab6abed7a6d26fa1c13372f3456
+    e32b718fa716bdb7693b9e419d6d4a39a3f7992e
   >-
     DZNEmptyDataSet: >-
     dd7cca17c1d07dfa78956859b1e70a52505678ef
-  >-
-    Realm: >-
-    ca4a4122e939e228e10694fc49011386cb2ecb07
-  >-
-    RealmSwift: >-
-    7d3c7033427816a2c3417ba0d004d694987e503a
 
 >-
   PODFILE CHECKSUM: >-
-  e6ed100e22335c8b7f16ef142ce99dd952b2dc91
+  2ce24958f2d0339d5befd443853ba919cc9a8838
 
 >-
   COCOAPODS: >-

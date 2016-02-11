@@ -7,41 +7,28 @@
 //
 
 import UIKit
-import Firebase
+
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
   var window: UIWindow?
-
+    let APP_ID = "2E0F1BF8-11E6-EDEE-FFE0-7C4E5A001600"
+    let SECRET_KEY = "CFC5798B-DB26-848C-FFB4-05957BBF7E00"
+    let VERSION_NUM = "v1"
+    var backendless = Backendless.sharedInstance()
 
   func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
     // Override point for customization after application launch.
-    checkIfUserIsSignIn()
+     backendless.initApp(APP_ID, secret:SECRET_KEY, version:VERSION_NUM)
+   backendless.userService.setStayLoggedIn(true)
+    if backendless.userService.currentUser != nil {
+        print("Current User")
+    }
     return true
   }
 
-    func checkIfUserIsSignIn() {
-
-        let ref = Firebase(url: "https://healthkitapp.firebaseio.com")
-        let handle = ref.observeAuthEventWithBlock { (authData) -> Void in
-            if authData != nil {
-
-                let standardDefaults = NSUserDefaults.standardUserDefaults()
-                standardDefaults.setObject(authData.uid, forKey: "currentUserUID")
-                NSOperationQueue.mainQueue().addOperationWithBlock({ () -> Void in
-                    self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
-                    let storyboard = UIStoryboard(name: "Main", bundle: nil)
-                    let mainRootController = storyboard.instantiateViewControllerWithIdentifier("HomeNav") as UIViewController
-                    self.window?.rootViewController = mainRootController
-
-                    self.window?.makeKeyAndVisible()
-
-                })
-            }
-        }
-        ref.removeAuthEventObserverWithHandle(handle)
-        
+    func checkIfUserIsSignIn() {        
     }
 
 

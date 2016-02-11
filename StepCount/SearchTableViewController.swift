@@ -8,14 +8,14 @@
 
 import UIKit
 import DZNEmptyDataSet
-import Firebase
+
 
 class SearchTableViewController: UITableViewController {
 
     var searchController = UISearchController(searchResultsController: nil)
-    var usersArray = Array<Dictionary<String,AnyObject>>()
-    var searchUsers = Array<Dictionary<String,AnyObject>>()
-    var selectedUserDic = Dictionary<String,AnyObject>()
+    var usersArray = [BackendlessUser]()
+    var searchUsers = [BackendlessUser]()
+    var selectedUserDic = BackendlessUser()
 
 
     override func viewDidLoad() {
@@ -32,22 +32,25 @@ class SearchTableViewController: UITableViewController {
     }
 
     func getUsers() {
-        let usernameRef = Firebase(url: "https://healthkitapp.firebaseio.com/users")
 
-        usernameRef.observeSingleEventOfType(.Value, withBlock: { snapshot in
-
-            let userDic = snapshot.value as? Dictionary<String, Dictionary<String,AnyObject>>
-
-            if let userDic = userDic {
-                for (_, dic) in userDic {
-                    self.usersArray.append(dic)
+        let dataStore = Backendless.sharedInstance().data .of(BackendlessUser)
+            dataStore.find({ (collection) -> Void in
+                for user in collection.data {
+                    let backendUser = user as? BackendlessUser
+                    if let backendUser = backendUser {
+                        self.usersArray.append(backendUser)
+                    }
+                 NSOperationQueue.mainQueue().addOperationWithBlock({ () -> Void in
+                    self.tableView.reloadData()
+                 })
                 }
-            }
-            NSOperationQueue.mainQueue().addOperationWithBlock({ () -> Void in
-                self.tableView.reloadData()
-            })
-        })
-        
+
+                print(collection)
+                }) { (error) -> Void in
+                    print(error.message)
+        }
+
+              
     }
 
     // MARK: - Table view data source
@@ -66,15 +69,15 @@ class SearchTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("searchCell", forIndexPath: indexPath)
 
-        var userDic = Dictionary<String,AnyObject>()
+        var userAtIndex = BackendlessUser()
         if searchController.active && searchController.searchBar.text != "" {
 
-            userDic = searchUsers[indexPath.row]
+            userAtIndex = searchUsers[indexPath.row]
         } else {
-            userDic = usersArray[indexPath.row]
+            userAtIndex = usersArray[indexPath.row]
         }
 
-        let username = userDic["userEmail"] as? String
+        let username = userAtIndex.name
 
         if let username = username {
             cell.textLabel?.text = username
@@ -87,15 +90,11 @@ class SearchTableViewController: UITableViewController {
     }
 
     func filterContentForSearchText(searchText: String, scope: Int) {
-        //        let searchPredicate = NSPredicate(format: "name like %@", searchText)
-
 
             searchUsers = usersArray.filter({ (theUser) -> Bool in
-                print(theUser["userEmail"])
 
-                return theUser["userEmail"]?.lowercaseString.rangeOfString(searchText.lowercaseString) != nil
+                return theUser.name.lowercaseString.rangeOfString(searchText.lowercaseString) != nil
             })
-
 
         tableView.reloadData()
     }

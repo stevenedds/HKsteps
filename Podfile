@@ -6,7 +6,7 @@
 target 'StepCount' do
 pod 'Backendless-ios-SDK'
 pod 'DZNEmptyDataSet'
-pod 'Charts/Realm'
+pod 'Charts'
 end
 
 target 'StepCountTests' do

@@ -7,13 +7,13 @@
 //
 
 import UIKit
-import Firebase
+
 
 class LoginViewController: UIViewController {
     @IBOutlet var emailTextField: UITextField!
 
     @IBOutlet var passwordTextField: UITextField!
-    let ref = Firebase(url: "https://healthkitapp.firebaseio.com")
+
     
 
     override func viewDidLoad() {
@@ -35,16 +35,15 @@ class LoginViewController: UIViewController {
 
 
     func login() {
-        ref.authUser(emailTextField.text!, password: passwordTextField.text) { (error, authData) -> Void in
-            if error != nil {
-                print(error.localizedDescription)
-            }else {
-                dispatch_async(dispatch_get_main_queue(), { () -> Void in
-                    self.performSegueWithIdentifier("loginSegue", sender: self)
-                })
-            }
-        }
+        Backendless.sharedInstance().userService.login(emailTextField.text, password: passwordTextField.text, response: { (user) -> Void in
 
+            dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                self.performSegueWithIdentifier("loginSegue", sender: self)
+            })
+            
+            }) { (error) -> Void in
+                print(error.message)
+        }
     }
 
     func dimissKeyboard() {
@@ -53,34 +52,17 @@ class LoginViewController: UIViewController {
     }
     func signUp() {
 
-        self.ref.createUser(emailTextField.text, password: passwordTextField.text) { (error: NSError!) in
+        let user = BackendlessUser()
+        user.name = emailTextField.text
+        user.password = passwordTextField.text
+        Backendless.sharedInstance().userService.registering(user, response: { (user) -> Void in
 
-            if error != nil {
-                print(error.localizedDescription)
-            } else {
-
-
-                self.ref.authUser(self.emailTextField.text, password: self.passwordTextField.text, withCompletionBlock: { (error, auth) in
-                    if error != nil {
-
-                    }else {
-
-                        let standardDefaults = NSUserDefaults.standardUserDefaults()
-                        standardDefaults.setObject(auth.uid, forKey: "currentUserUID")
-
-                        let newUserName = [ "userID":auth.uid, "friendsCount":0, "userEmail":self.emailTextField.text!, "steps": 0, "wins": 0, "loses": 0]
-
-                        self.ref.childByAppendingPath("users").childByAppendingPath(auth.uid).setValue(newUserName)
-
-                        dispatch_async(dispatch_get_main_queue(), { () -> Void in
-                            self.performSegueWithIdentifier("loginSegue", sender: self)
-                        })
-                    }
-                    
-                    
-                })
-            }
+            dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                self.performSegueWithIdentifier("loginSegue", sender: self)
+            })
             
+            }) { (error) -> Void in
+                    print(error.message)
         }
         
     }
