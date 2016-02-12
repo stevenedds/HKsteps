@@ -68,4 +68,34 @@ class HealthManager {
       healthStore?.executeQuery(query)
   }
   
+  func fetchHourlyStepsWithCompletionHandler (
+    completionHandler:(Double?, NSError?)->()) {
+      
+      let date = NSDate()
+      let cal = NSCalendar(calendarIdentifier: NSCalendarIdentifierGregorian)!
+      let components = cal.components([.Day , .Month, .Year ], fromDate: date)
+      let newDate = cal.dateFromComponents(components)
+      
+      let hour1 = newDate?.dateByAddingTimeInterval(60*60)
+      
+      let sampleType = HKQuantityType.quantityTypeForIdentifier(HKQuantityTypeIdentifierStepCount)
+      
+      let predicate = NSPredicate(format: "startDate >= %@ AND startDate < %@" ,newDate!, hour1!)
+      
+      let query = HKStatisticsQuery(quantityType: sampleType!, quantitySamplePredicate: predicate,
+        options: .CumulativeSum)
+        { (query, result, error) in
+          
+          var totalSteps = 0.0
+          
+          if let sumQuantity = result?.sumQuantity() {
+            totalSteps = sumQuantity.doubleValueForUnit(HKUnit.countUnit())
+            
+          }
+          completionHandler(totalSteps, nil)
+      }
+      
+      healthStore?.executeQuery(query)
+  }
+
 }
