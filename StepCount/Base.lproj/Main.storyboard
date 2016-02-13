@@ -278,7 +278,6 @@
         <!--Challenge-->
         <scene sceneID="c4V-gk-ecJ">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="knc-He-V6H" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="Q42-RB-Fbq" customClass="ChallengeDetailViewController" customModule="StepCount" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="n7z-ob-VHO"/>
@@ -290,6 +289,9 @@
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="stepsLabel" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Riw-kh-FJu">
                                 <rect key="frame" x="20" y="72" width="560" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="tqj-qD-ZEs"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -301,22 +303,41 @@
                                     <action selector="getDataButton" destination="Q42-RB-Fbq" eventType="touchUpInside" id="Hhl-ky-9ij"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3FT-7S-C8Y" customClass="LineChartView" customModule="Charts">
+                                <rect key="frame" x="20" y="274" width="560" height="269"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KZ6-X2-I6u">
+                                <rect key="frame" x="280" y="139" width="41" height="30"/>
+                                <state key="normal" title="graph"/>
+                                <connections>
+                                    <action selector="graphButton" destination="Q42-RB-Fbq" eventType="touchUpInside" id="h99-W5-AWc"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="Fj2-nW-sIa" secondAttribute="trailing" id="CqK-Nt-fX5"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Riw-kh-FJu" secondAttribute="trailing" id="OVb-0e-CP9"/>
-                            <constraint firstAttribute="leadingMargin" secondItem="Fj2-nW-sIa" secondAttribute="leading" id="T8k-Cb-TX1"/>
-                            <constraint firstItem="Riw-kh-FJu" firstAttribute="top" secondItem="n7z-ob-VHO" secondAttribute="bottom" constant="8" id="XXn-EV-CwY"/>
-                            <constraint firstAttribute="leadingMargin" secondItem="Riw-kh-FJu" secondAttribute="leading" id="Zvr-8E-rhy"/>
-                            <constraint firstItem="Fj2-nW-sIa" firstAttribute="top" secondItem="Riw-kh-FJu" secondAttribute="bottom" constant="8" id="bA3-T7-p3t"/>
+                            <constraint firstItem="3FT-7S-C8Y" firstAttribute="trailing" secondItem="Fj2-nW-sIa" secondAttribute="trailing" id="0eR-DV-9X7"/>
+                            <constraint firstItem="Riw-kh-FJu" firstAttribute="trailing" secondItem="fBJ-hf-3zp" secondAttribute="trailingMargin" id="3UQ-Zc-R74"/>
+                            <constraint firstItem="3FT-7S-C8Y" firstAttribute="leading" secondItem="fBJ-hf-3zp" secondAttribute="leadingMargin" id="5Yk-S1-a1K"/>
+                            <constraint firstItem="HHg-1h-uQh" firstAttribute="top" secondItem="3FT-7S-C8Y" secondAttribute="bottom" constant="8" symbolic="YES" id="5hm-8o-AIK"/>
+                            <constraint firstItem="Riw-kh-FJu" firstAttribute="top" secondItem="n7z-ob-VHO" secondAttribute="bottom" constant="8" symbolic="YES" id="9vM-JX-Vvt"/>
+                            <constraint firstItem="Riw-kh-FJu" firstAttribute="leading" secondItem="Fj2-nW-sIa" secondAttribute="leading" id="Cds-rg-krF"/>
+                            <constraint firstItem="Fj2-nW-sIa" firstAttribute="centerX" secondItem="KZ6-X2-I6u" secondAttribute="centerX" id="FJE-8l-LkF"/>
+                            <constraint firstItem="Fj2-nW-sIa" firstAttribute="leading" secondItem="3FT-7S-C8Y" secondAttribute="leading" id="Wu0-4U-1Kl"/>
+                            <constraint firstItem="Fj2-nW-sIa" firstAttribute="top" secondItem="Riw-kh-FJu" secondAttribute="bottom" constant="8" symbolic="YES" id="Y6M-Q8-LpN"/>
+                            <constraint firstItem="KZ6-X2-I6u" firstAttribute="top" secondItem="Fj2-nW-sIa" secondAttribute="bottom" constant="8" symbolic="YES" id="exT-LB-lVU"/>
+                            <constraint firstItem="3FT-7S-C8Y" firstAttribute="top" secondItem="fBJ-hf-3zp" secondAttribute="top" constant="274" id="lJc-vQ-5AV"/>
+                            <constraint firstItem="Fj2-nW-sIa" firstAttribute="trailing" secondItem="Riw-kh-FJu" secondAttribute="trailing" id="r82-iF-pgQ"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Challenge" id="WBp-bf-cqX"/>
                     <connections>
+                        <outlet property="lineChartView" destination="3FT-7S-C8Y" id="xis-wN-d17"/>
                         <outlet property="stepsLabel" destination="Riw-kh-FJu" id="pvI-Gp-4rW"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="knc-He-V6H" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1754" y="2382"/>
         </scene>
