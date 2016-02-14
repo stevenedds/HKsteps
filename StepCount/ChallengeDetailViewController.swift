@@ -11,6 +11,11 @@ import Charts
 
 class ChallengeDetailViewController: UIViewController {
 
+  let purple = UIColor(red: 78/255, green: 112/255, blue: 239/255, alpha: 1)
+  let white = UIColor.whiteColor()
+  let backgroundColor = UIColor(red: 236/255, green: 240/255, blue: 253/255, alpha: 1)
+
+  
   let healthManager = HealthManager()
   
   var hourlyTimes = HourlyData()
@@ -87,22 +92,15 @@ class ChallengeDetailViewController: UIViewController {
       dataEntries.append(dataEntry)
     }
     
-    var colors: [UIColor] = []
-    
-    for _ in 0..<dataPoints.count {
-      let red = Double(arc4random_uniform(256))
-      let green = Double(arc4random_uniform(256))
-      let blue = Double(arc4random_uniform(256))
-      
-      let color = UIColor(red: CGFloat(red/255), green: CGFloat(green/255), blue: CGFloat(blue/255), alpha: 1)
-      colors.append(color)
-    }
-    
-    
     
     let lineChartDataSet = LineChartDataSet(yVals: dataEntries, label: "steps")
     let lineChartData = LineChartData(xVals: dataPoints, dataSet: lineChartDataSet)
     lineChartView.data = lineChartData
+    lineChartView.descriptionText = ""
+    lineChartView.backgroundColor = backgroundColor
+
+    lineChartDataSet.colors = [purple]
+    lineChartDataSet.drawCirclesEnabled = false
     
   }
 
