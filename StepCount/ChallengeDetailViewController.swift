@@ -36,15 +36,6 @@ class ChallengeDetailViewController: UIViewController {
     }
 
   
-  @IBAction func getDataButton() {
-    
-  }
-  
-  @IBAction func graphButton() {
-    
-
-  }
-  
 
   func getSteps() {
     
@@ -56,7 +47,7 @@ class ChallengeDetailViewController: UIViewController {
         if let dailySteps = daily {
           dispatch_async(dispatch_get_main_queue(), {
             
-            self.stepsLabel.text = "\(dailySteps)"
+            self.stepsLabel.text = "\(dailySteps) steps today"
           })
           
         }
