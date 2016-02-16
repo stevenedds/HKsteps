@@ -108,7 +108,7 @@
 				4E839FC01C5C6512005527D3 /* ViewController.swift */,
 				4E3DE01F1C699A9E00241FD3 /* FriendsTableViewController.swift */,
 				4EB379891C6D70B3000B33D1 /* ChallengeDetailViewController.swift */,
-				4E3DE0271C69A2E000241FD3 /* Friend Cell */,
+				4E3DE0271C69A2E000241FD3 /* Views */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -154,13 +154,13 @@
 			name = icons;
 			sourceTree = "<group>";
 		};
-		4E3DE0271C69A2E000241FD3 /* Friend Cell */ = {
+		4E3DE0271C69A2E000241FD3 /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				4E3DE0231C69A2DC00241FD3 /* FriendTableViewCell.swift */,
 				4E3DE0241C69A2DC00241FD3 /* FriendTableViewCell.xib */,
 			);
-			name = "Friend Cell";
+			name = Views;
 			sourceTree = "<group>";
 		};
 		4E3DE0281C69ADE100241FD3 /* images */ = {

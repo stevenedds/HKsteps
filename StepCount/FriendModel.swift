@@ -9,10 +9,36 @@
 import Foundation
 
 struct Friend {
-  var name = ""
-  var steps = ""
-  var avatarName = ""
+  let name: String
+  var steps: String
+  var image: String
 }
+
+extension Friend {
+  
+  static let friends = [steve, ryan, max]
+  
+  static let steve = Friend(
+    name:"steven edds",
+    steps: "8,275",
+    image: "steve.jpg")
+  
+  static let ryan = Friend(
+    name: "ryan gunn",
+    steps: "7,509",
+    image: "ryan.png")
+  
+  static let max = Friend(
+    name: "max",
+    steps: "4,378",
+    image: "max.png")
+}
+
+let friends = [
+  Friend(name: "steve", steps: "8,240", image: "steve.jpg"),
+  Friend(name: "ryan", steps: "7,509", image: "ryan.png"),
+  Friend(name: "max", steps: "4,374", image: "max.png")]
+
 
 struct HourlyData {
   var hour1 = 0.0

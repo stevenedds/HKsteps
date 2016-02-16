@@ -26,10 +26,11 @@ class FriendTableViewCell: UITableViewCell {
       
   }
 
-    override func setSelected(selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
+  func configure(withFriend friend: Friend) {
+    avatarImageView.image = UIImage(named: friend.image)
+    nameLabel.text = friend.name
+    stepsLabel.text = friend.steps
     
+  }
+  
 }
